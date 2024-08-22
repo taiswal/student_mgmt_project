@@ -1,0 +1,16 @@
+<!-- <p>student-item works!</p> -->
+
+<div class="card" style="width: 16rem;" (click)="goTo('student-details',student.id)">
+    <!-- <img src="https://source.unsplash.com/random/600x400" class="card-img-top" alt="..."> -->
+    <img [src]="student.img" class="card-img-top" alt="..." style="height: 200%;">
+    <div class="card-body">
+      <h5 class="card-title">{{student.name}}</h5>
+      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+      <p class="card-text">Age : - {{student.age}}</p>
+      <p class="card-text">Email : - {{student.email}}</p>
+      <p class="card-text">Number : - {{student.number}}</p>
+      <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+      <button class="btn btn-primary me-2" (click)="deleteStudent($event, student.id)">Delete</button>
+      <button class="btn btn-primary me-2" (click)="editStudent($event, student.id)">Edit</button>
+    </div>
+  </div>
